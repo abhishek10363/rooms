@@ -1,0 +1,84 @@
+@import "./variable.scss";
+@import "./breakpoint.scss";
+
+.register {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("../../public/2016633195top-15-beautiful-and-luxury-bedroom-interior-design-ideas-2023.jpg")
+    center;
+  background-size: cover;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40px;
+    padding: 40px;
+    background-color: rgba(71, 68, 68, 0.8);
+    border-radius: 20px;
+
+    @include lg {
+      width: 60%;
+    }
+    @include mm {
+      width: 80%;
+    }
+
+    &_form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      input {
+        width: 100%;
+        padding: 7px 15px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(225, 225, 225);
+        outline: none;
+        text-align: center;
+        color: white;
+
+        input:not(:placholder-shown):focus {
+          background: transparent;
+        }
+        &::placeholder {
+          color: white;
+        }
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+        cursor: pointer;
+        color: white;
+        font-size: 14px;
+
+        img {
+          width: 55px;
+        }
+      }
+      button {
+        margin-top: 15px;
+        @include buttonStyle;
+        width: 50%;
+        // background-color: red;
+
+        &:hover {
+          box-shadow: 0 0 10px 3px rgb(213, 179, 179);
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
